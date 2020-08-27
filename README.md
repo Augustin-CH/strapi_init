@@ -14,9 +14,21 @@ La base est constituée de 3 tables :
 - Products : regroupe les produits disponibles, leurs quantités, prix, description et image
 - Orders : historise les commandes passées, par qui, de quels produits, à quelle date
 
-# REQUETE API #
-La requete "GET http://localhost:1337/orders" affichera les differentes commandes, les produits qu'elles contenaients ainsi que les informations des utilisateurs les ayants passées.
+# REQUETES API #
+La requête "GET http://localhost:1337/orders" affichera les différentes commandes, les produits qu'elles contenaients ainsi que les informations des utilisateurs les ayant passées.
 
-On pourra appliquer ces diffenrents parametres pour trier, filtrer, choisir l'ordre d'affichage etc :
+On pourra appliquer ces différents paramètres pour trier, filtrer, choisir l'ordre d'affichage etc :
 https://strapi.io/documentation/3.0.0-beta.x/content-api/parameters.html#available-operators
+
+La requête suivante permet d'enregistrer une commande :
+POST http://localhost:1337/orders
+{
+    "user": 1, //ID de l'utilisateur
+    "validation_date": "2020-08-27T10:00:00.000Z",
+    "products": 1 //ID du/des produit(s)
+}
+
+Plus d'info : https://strapi.io/documentation/3.0.0-beta.x/content-api/api-endpoints.html#endpoints
+
+
 
